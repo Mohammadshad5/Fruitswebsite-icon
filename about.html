@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – Fruitkha</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ---------------- GLOBAL ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 100;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.scrolled {
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.7);
+}
+
+.nav-left img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.nav-center ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-center ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-center ul li a:hover {
+  color: orange;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right img {
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+ .nav-right img:hover {
+      transform: scale(1.2);
+    }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* ---------------- HERO ---------------- */
+.about-hero {
+    height: 70vh;
+    /* background: url("imgfruits/fruitsgrapes.jpg") center/cover no-repeat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+.about-hero .content {
+  position: relative;
+  text-align: center;
+  animation: fadeUp 1.3s ease;
+}
+
+.about-hero h1 {
+    color: orange;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.about-hero p {
+    font-size: 40px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+.about-hero .btn {
+  padding: 12px 25px;
+  background: orange;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-hero .btn:hover {
+  background: #ffb74d;
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(40px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* ---------------- ABOUT ---------------- */
+
+
+/* ---------------- SERVICES ---------------- */
+
+/* GLOBAL */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+/* MAIN BOX */
+.boxnew3{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:50px;
+  padding:60px 5%;
+}
+
+/* LEFT SIDE TITLE */
+.typing{
+  font-size:42px;
+  font-weight:700;
+  color:#222;
+  white-space:nowrap;
+  width:30%;
+  animation:typing 2.8s steps(30) forwards, blink .7s infinite;
+}
+
+@keyframes typing{to{width:260px;}}
+@keyframes blink{50%{border-color:transparent;}}
+
+/* GRID */
+.card-gridnew1{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+  margin-top:25px;
+}
+
+/* CARDS */
+.card-gridnew1 div{
+  padding:28px;
+  background:#fff;
+  border-radius:14px;
+  border:1px solid #eee;
+  box-shadow:0 5px 15px rgba(0,0,0,0.07);
+  transition:.35s ease;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Smooth Hover Lift + Glow Border */
+.card-gridnew1 div:hover{
+  transform:translateY(-7px);
+  border-color:#ff6a00;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* ICONS */
+.card-gridnew1 i{
+  font-size:36px;
+  color:#ff6a00;
+  margin-bottom:12px;
+}
+
+/* TEXT */
+.card-gridnew1 h3{
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:6px;
+  color:#222;
+}
+.card-gridnew1 p{
+  color:#666;
+  font-size:15px;
+  line-height:1.5;
+}
+
+/* RIGHT IMAGE */
+.boxnew32 img{
+  width:430px;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+  transition:.4s ease;
+}
+
+/* Smooth image hover */
+.boxnew32 img:hover{
+  transform:scale(1.03);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .boxnew3{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  .boxnew32 img{
+    width:100%;
+  }
+  .card-gridnew1{
+    grid-template-columns:1fr;
+  }
+  .card-gridnew1 div{
+    text-align:center;
+  }
+}
+
+
+
+/* Carousel container */
+.smooth-logo-carousel {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Track with smooth animation */
+.smooth-logo-track {
+  display: flex;
+  width: calc(200%); 
+  animation: smoothScroll 25s linear infinite;
+  gap: 40px;
+}
+
+/* Individual logo item */
+.smooth-logo-item {
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.smooth-logo-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hover effect for interaction */
+.smooth-logo-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Keyframes for smooth continuous scrolling */
+@keyframes smoothScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20%); } 
+}
+
+
+
+
+
+
+
+/* Animation */
+@keyframes pop {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+/* box 12 slider  */
+
+.box12 {
+    padding-top: 16px;
+    position: relative;
+    width: 420px;
+    height: 350px;
+    margin: 40px auto;
+    position: relative;
+    background: #fff;
+    border-radius: 22px;
+    /* padding: 25px; */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    animation: fade 15s infinite;
+}
+
+.s1 { animation-delay: 0s; }
+.s2 { animation-delay: 5s; }
+.s3 { animation-delay: 10s; }
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    30%  { opacity: 1; }
+    35%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.person-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 4px solid #ff4d6d;
+    box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+}
+
+.person-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff4d6d;
+    margin-bottom: 12px;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+/* boxnew1 css */
+/* boxlastnew1 */
+.boxnew1 {
+    height: 64px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+     margin: 10px 0; 
+  padding: 5px; 
+  color: orange;
+}
+.boxnew1 h2 {
+  border-bottom: 2px solid #000; 
+  display: inline-block;       
+  padding-bottom: 5px;            
+}
+
+
+
+
+.boxnew2 {
+    color: #0000009c;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+}
+
+/* boxnew3 */
+
+
+.boxnew3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boxnew4 {
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 30%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.card p {
+    font-size: 15px;
+    color: #777;
+}
+
+/* boxnew 3last */
+
+
+
+
+/* BOX 14 –  */
+.box14 {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 90vh;
+    background: url("imgfruits/staberrybox13.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+}
+
+/* Dark Overlay */
+.box14::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* BLUR TEXT BOX */
+.glass {
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.10);
+    border-radius: 18px;
+    padding: 30px 40px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.box14-text {
+    position: relative;
+    text-align: left;   
+    color: #fff;
+}
+
+/* TEXT STYLING */
+.box14-text h4 {
+    letter-spacing: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffdd75;
+}
+
+.box14-text h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+.box14-text h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.box14-text h2 span {
+    color: #ff9800;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* BUTTON */
+.box14-btn {
+    padding: 11px 20px;
+    background: #ff9800;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.box14-btn:hover {
+    background: #ffa726;
+    transform: translateY(-3px);
+}
+
+
+
+
+    /* box 20 */
+
+.footer {
+  background: linear-gradient(135deg, #0b0e22, #071325, #0a1c3a);
+  color: #e0e0e0;
+  padding: 60px 25px; 
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 111, 97, 0.2);
+  filter: blur(120px);
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-box {
+    left: 4px;
+    position: relative;
+    flex: 1 1 220px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.footer-box h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+    font-weight: 500;
+    color: orange;
+}
+
+.footer-box p {
+    color: white;
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.footer-box a {
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.footer-box a:hover {
+  color: orange;
+  letter-spacing: 0.5px;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin: 7px 0;
+}
+
+.footer-box form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.footer-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.footer-box input::placeholder {
+  color: #bbb;
+}
+
+.footer-box input:focus {
+  background: rgba(255,255,255,0.1);
+}
+
+.footer-box button {
+  padding: 10px 15px;
+  background: linear-gradient(orange);
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-box button:hover {
+  background: linear-gradient(rgb(241, 178, 61));
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+    padding-left: 30px;
+    gap: 18px;
+    display: flex;
+    /* text-align: center; */
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box22 {
+    display: flex;
+    gap: 15px; 
+    font-size: 24px; 
+}
+
+.box22 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.box22 a:hover {
+    color: #0077b5; 
+}
+
+
+
+    @media screen and (max-width: 480px) {
+
+ 
+/* NAVBAR */
+.hamburger div {
+    left: 9px;
+    position: relative;
+    width: 21px;
+    height: 3px;
+    background: white;
+}
+
+
+
+
+  
+
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  .nav-left img {
+    width: 90px;
+  }
+nav {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 100;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+  .nav-center {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+.nav-center ul {
+    height: 196px;
+    background: rgba(0,0,0,0.9);
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.nav-left {
+    padding-left: 0px;
+}
+
+  .nav-center ul li a {
+    font-size: 18px;
+  }
+
+
+  .nav-center.active {
+    display: block;
+  }
+
+
+.nav-right img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+.nav-right {
+    display: flex;
+}
+ 
+  .hamburger {
+    display: flex;
+  }
+
+
+  /* HERO */
+.about-hero {
+    height: 45vh;
+    padding: 0 15px;
+}
+
+  .about-hero h1 {
+    font-size: 26px;
+  }
+
+  .about-hero p {
+    font-size: 18px;
+  }
+
+  .about-hero .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+
+  /* ABOUT BOX */
+  .boxnew3 {
+    flex-direction: column-reverse;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+ .typing {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    animation: none;
+}
+
+
+.card-gridnew1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-gridnew1 div {
+    width: 80%;
+    text-align: center;
+}
+.card-gridnew1 i {
+    font-size: 26px;
+    color: #ff6a00;
+    margin-bottom: 12px;
+}
+.card-gridnew1 h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #222;
+}
+.card-gridnew1 div {
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: .35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.card-gridnew1 p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.boxnew32 img {
+    width: 84%;
+}
+.boxnew1 {
+    height: 64px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 5px;
+    color: orange;
+}
+
+  /* LOGO SLIDER */
+  .smooth-logo-track {
+    gap: 20px;
+  }
+  .smooth-logo-item {
+    flex: 0 0 100px;
+  }
+.boxnew2 {
+    padding-inline: 24px;
+    text-align: center;
+    color: #0000009c;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+}
+.box14-text h4 {
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffdd75;
+}
+.box14-text h1 {
+    font-size: 22px;
+}
+
+  /* TESTIMONIAL BOX (box12) */
+.box12 {
+    /* text-align: center; */
+    width: 80%;
+    height: 315px;
+    padding: 15px 0px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card img {
+    width: 80%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.text {
+    padding-inline: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+ .person-img {
+    width: 95px;
+    height: 95px;
+}
+.person-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+
+  /* PRODUCT CARDS */
+.card {
+    width: 82%;
+    height: auto;
+}
+
+  .card img {
+    width: 95%;
+    height: 200px;
+}
+
+
+  /* BOX 14 (big background section) */
+.box14 {
+    height: 54vh;
+    padding-left: 15px;
+    justify-content: center;
+}
+
+  .glass {
+    padding: 20px;
+  }
+
+  .box14-text h1 {
+    font-size: 21px;
+}
+
+ .box14-text h2 {
+    font-size: 18px;
+}
+.box14-text h2 span {
+    color: #ff9800;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+  .box14-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+
+  /* FOOTER */
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-box {
+    margin: 10px 0;
+  }
+
+  .footer-box form {
+    flex-direction: column;
+  }
+
+  .footer-box input {
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .footer-box button {
+    border-radius: 8px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+  }
+  .footer-bottom {
+    padding-left: 10px;
+    gap: 18px;
+    display: flex;
+    /* text-align: center; */
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  .box22 {
+    margin-top: 5px;
+  }
+.boxnew4 {
+    /* left: 13px; */
+    position: relative;
+    width: 95%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.card h3 {
+    font-size: 16px;
+    margin: 0px 0;
+    font-weight: 600;
+    color: #333;
+}
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-left"><img src="imgfruits/fruitsonline.png" alt="Logo"></div>
+  <div class="nav-center">
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="news.html">News</a></li>
+            <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+   <a href="shop.html"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Shop Icon"></a>  
+    <div class="hamburger" id="hamburger">
+      <div>
+
+      </div>
+      <div></div><div></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="content">
+    <h1>We sale fresh fruits</h1>
+    <p>About Us</p>
+  </div>
+</div>
+
+
+
+
+<!-- ABOUT -->
+
+<!-- SERVICES -->
+<div class="boxnew3">
+
+  <div class="boxnew31">
+    <h2 class="typing">Why Fruitkha</h2>
+
+    <div class="card-gridnew1">
+
+      <div class="cardnew1">
+        <i class="fa-solid fa-truck"></i>
+        <h3>Home Delivery</h3>
+        <p>sit voluptatem accusantium dolore mque laudantium.</p>
+      </div>
+
+      <div class="cardnew2">
+        <i class="fa-solid fa-tags"></i>
+        <h3>Best Price</h3>
+        <p>sit voluptatem accusantium dolore mque laudantium.</p>
+      </div>
+
+      <div class="cardnew3">
+        <i class="fa-solid fa-box"></i>
+        <h3>Custom Box</h3>
+        <p>sit voluptatem accusantium dolore mque laudantium.</p>
+      </div>
+
+      <div class="cardnew4">
+        <i class="fa-solid fa-rotate-left"></i>
+        <h3>Quick Refund</h3>
+        <p>sit voluptatem accusantium dolore mque laudantium.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="boxnew32">
+    <img src="imgfruits/backetwebsite.jpg" alt="">
+  </div>
+
+</div>
+
+
+<!-- 
+!-- BOX 14 – Fullscreen Sale Banner --> 
+<div class="box14">
+    <div class="box14-text">
+        <h4>DECEMBER SALE IS LIVE</h4>
+        <h1>Fresh Fruits Mega Sale</h1>
+        <h2>Upto <span>50% Off</span></h2>
+        <a href="#" class="box14-btn">Shop Now</a>
+    </div>
+</div>
+
+
+
+
+<!-- box new 1 -->
+
+<div class="boxnew1">
+   <h2>Our Team</h2>
+</div>
+<div class="boxnew2">  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+       Aliquid, fuga quas itaque eveniet beatae optio.</p>
+      </div>
+
+
+
+
+      <!-- box new 3 -->
+
+      <div class="boxnew3">
+        <div class="boxnew4">
+           <div class="card">
+            <img src="imgfruits/aboutwomen.jpg" alt="Jimmy Doe">
+            <h3>Jimmy Doe</h3>
+            <p>Farmer</p>
+        </div>
+
+        <div class="card">
+            <img src="imgfruits/aboutwomen2.jpg" alt="Marry Doe">
+            <h3>Marry Doe</h3>
+            <p>Farmer</p>
+        </div>
+
+        <div class="card">
+            <img src="imgfruits/aboutman.jpg" alt="Simon Joe">
+            <h3>Simon Joe</h3>
+            <p>Farmer</p>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+  <!-- slider box 12 -->
+
+
+ <div class="box12">
+
+    <div class="slide s1">
+        <img src="imgfruits/mrarsh.png" class="person-img">
+        <h3 class="person-name">Mohammad Arsh</h3>
+        <p class="tag">Local Shop Owner</p>
+        <p class="text">
+            Sed ut perspiciatis unde omnis iste natus error veritatis et quasi architecto 
+            beatae vitae dicta eaque ipsa quae ab illo inventore.
+        </p>
+    </div>
+
+    <div class="slide s2">
+        <img src="imgfruits/mrshad.png" class="person-img">
+        <h3 class="person-name">Mohammad Adil</h3>
+        <p class="tag">Local Shop Owner</p>
+        <p class="text">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque 
+            ipsa quae ab illo inventore veritatis architecto beatae vitae dicta.
+        </p>
+    </div>
+
+    <div class="slide s3">
+        <img src="imgfruits/mrsara.png" class="person-img">
+        <h3 class="person-name">Osbal khan</h3>
+        <p class="tag">Local Shop Owner</p>
+        <p class="text">
+            Perspiciatis unde omnis iste natus error veritatis et quasi architecto. 
+            Beatae vitae dicta eaque ipsa quae ab illo inventore.
+        </p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="smooth-logo-carousel">
+  <div class="smooth-logo-track">
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo.png" alt="Logo 1"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo2.png" alt="Logo 2"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo3.png" alt="Logo 3"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo4.png" alt="Logo 4"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo5.png" alt="Logo 5"></div>
+    <!-- Duplicate logos for seamless infinite effect -->
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo.png" alt="Logo 1"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo2.png" alt="Logo 2"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo3.png" alt="Logo 3"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo4.png" alt="Logo 4"></div>
+    <div class="smooth-logo-item"><img src="imgfruits/sliderlogo5.png" alt="Logo 5"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-box">
+      <h3>About Us</h3>
+      <p>Ut enim ad minima veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    </div>
+    <div class="footer-box">
+      <h3>Get in Touch</h3>
+      <p>3481, East Hukupara, Gifrtok, USA</p>
+      <p>Email: support@ruktha.com</p>
+      <p>Phone: +00 111 222 3333</p>
+    </div>
+    <div class="footer-box">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h3>Subscribe</h3>
+      <p>Subscribe to our mailing list to get the latest updates.</p>
+      <form>
+        <input type="email" placeholder="Email">
+        <button>➤</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyrights © 2019 - Imran Hossain, All Rights Reserved.
+    <p>Distributed By - Themewagon</p>
+    <div class="box22">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+document.querySelector(".hamburger").addEventListener("click", function () {
+    document.querySelector(".nav-center").classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
+
+

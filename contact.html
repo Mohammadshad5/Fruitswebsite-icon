@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Fruitkha</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* SAME CSS - FULL COPY FROM ABOUT PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 100;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.scrolled {
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.7);
+}
+
+.nav-left img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.nav-center ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-center ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-center ul li a:hover {
+  color: orange;
+}
+
+.nav-right img {
+  width: 28px;
+  height: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+ .nav-right img:hover {
+      transform: scale(1.2);
+    }
+
+.hamburger {
+  display: none;
+}
+
+/* HERO SECTION */
+.contact-hero {
+    height: 70vh;
+    /* background: url("imgfruits/fruitsgrapes.jpg") center/cover no-repeat; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.contact-hero .content {
+  position: relative;
+  text-align: center;
+  animation: fadeUp 1.3s ease;
+}
+
+.contact-hero h1 {
+  color: orange;
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.contact-hero p {
+  font-size: 36px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+/* container */
+.contact-container {
+  display: flex;
+  gap: 0;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease both;
+}
+
+/* LEFT BLACK PANEL */
+/* LEFT PANEL — Black remains same */
+.contact-left {
+  flex: 1;
+  padding: 50px;
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+/* Headings Stylish Neon Border */
+.contact-left h2 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  color: #ff7b00;
+  border-bottom: 2px solid #ff7b00;
+  width: fit-content;
+}
+
+/* Section Titles */
+.contact-left h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #ffb057;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.contact-left h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40px;
+  height: 2px;
+  background: #ff7b00;
+  border-radius: 2px;
+}
+
+/* Fancy Text Boxes */
+.contact-left p {
+  background: #111;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 8px 0;
+  border-left: 3px solid #ff7b00;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: 0.3s ease;
+}
+
+/* Hover Glow Effect */
+.contact-left p:hover {
+  transform: translateX(6px);
+  background: #151515;
+}
+
+/* Icons */
+.contact-left p i {
+  margin-right: 10px;
+  color: #ff7b00;
+  font-size: 16px;
+}
+
+
+/* RIGHT WHITE PANEL */
+.contact-right {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  animation: slideRight 0.8s ease both;
+}
+
+.contact-right h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: #ff7b00;
+  box-shadow: 0 0 8px rgba(255, 123, 0, 0.4);
+}
+
+.contact-right textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* Button */
+.contact-right button {
+  padding: 14px 25px;
+  background: #ff7b00;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-right button:hover {
+  background: #e56f00;
+  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* --- Smooth Animations --- */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+.location-section {
+    padding: 50px 20px;
+    background: #f5f5f5;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.location-section h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.location-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+    /* box 20 */
+ /* FOOTER FULL AREA */
+.footer {
+  background: linear-gradient(135deg, #0b0e22, #071325, #0a1c3a);
+  color: #e0e0e0; /* soft white for smooth look */
+  padding: 60px 25px; /* thoda aur spacing for breathable layout */
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 111, 97, 0.2);
+  filter: blur(120px);
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-box {
+    left: 4px;
+    position: relative;
+    flex: 1 1 220px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.footer-box h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+    font-weight: 500;
+    color: orange;
+}
+
+.footer-box p {
+    color: white;
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.footer-box a {
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.footer-box a:hover {
+  color: orange;
+  letter-spacing: 0.5px;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin: 7px 0;
+}
+
+.footer-box form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.footer-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.footer-box input::placeholder {
+  color: #bbb;
+}
+
+.footer-box input:focus {
+  background: rgba(255,255,255,0.1);
+}
+
+.footer-box button {
+    top: 10px;
+    position: relative;
+    height: 36px;
+    padding: 10px 15px;
+    background: linear-gradient(orange);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-box button:hover {
+  background: linear-gradient(rgb(241, 178, 61));
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+    padding-left: 30px;
+    gap: 18px;
+    display: flex;
+    /* text-align: center; */
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box22 {
+    display: flex;
+    gap: 15px; /* icons ke beech space */
+    font-size: 24px; /* icon size */
+}
+
+.box22 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.box22 a:hover {
+    color: #0077b5; /* hover color */
+}
+.boxnewextra {
+    height: 491px;
+    background-color: white;
+}
+
+
+/* RESPONSIVE  */
+
+    @media screen and (max-width: 480px) {
+
+/* NAVBAR */
+.hamburger div {
+    left: 9px;
+    position: relative;
+    width: 21px;
+    height: 3px;
+    background: white;
+}
+
+
+
+
+  
+
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  .nav-left img {
+    width: 90px;
+  }
+nav {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 100;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+  .nav-center {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+.nav-center ul {
+    height: 196px;
+    background: rgba(0,0,0,0.9);
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.nav-left {
+    padding-left: 0px;
+}
+
+  .nav-center ul li a {
+    font-size: 18px;
+  }
+
+
+  .nav-center.active {
+    display: block !important;
+  }
+
+
+.nav-right img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+.nav-right {
+    display: flex ;
+    align-items: center;
+}
+ 
+ .hamburger {
+    gap: 5px;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+  .about-hero {
+    height: 56vh !important;
+    padding: 0 15px;
+}
+
+  .about-hero h1 {
+    font-size: 26px !important;
+  }
+
+  .about-hero p {
+    font-size: 18px !important;
+  }
+
+  .about-hero .btn {
+    padding: 10px 18px !important;
+    font-size: 14px;
+  }
+  .contact-hero {
+    height: 56vh;
+    /* background: url("imgfruits/fruitsgrapes.jpg") center/cover no-repeat; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-hero h1 {
+    color: orange;
+    font-size: 30px;
+    margin-bottom: 12px;
+} 
+.contact-hero p {
+    font-size: 18px;
+}
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-left h2,
+  .contact-right h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .contact-left h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .contact-left p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .contact-right button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .boxheight {
+    padding: 10px;
+  }
+  .location-section h2 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}  
+
+
+   /* LOGO SLIDER */
+  .smooth-logo-track {
+    gap: 20px;
+  }
+  .smooth-logo-item {
+    flex: 0 0 100px;
+  }
+/* FOOTER */
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-box {
+    margin: 10px 0;
+  }
+
+  .footer-box form {
+    flex-direction: column;
+  }
+
+  .footer-box input {
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .footer-box button {
+    border-radius: 8px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+  }
+  .footer-bottom {
+    padding-left: 10px;
+    gap: 18px;
+    display: flex;
+    /* text-align: center; */
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  .box22 {
+    margin-top: 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left"><img src="imgfruits/fruitsonline.png" alt="Logo"></div>
+  <div class="nav-center">
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    
+      <li><a href="news.html">News</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+  <a href="shop.html"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Shop Icon"></a>  
+    <div class="hamburger"  id="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="contact-hero">
+  <div class="content">
+    <h1>Contact Us</h1>
+    <p>We’d Love to Hear From You</p>
+  </div>
+</div>
+
+
+<div class="boxheight">
+<div class="contact-container">
+
+  <!-- LEFT INFO BOX -->
+  <div class="contact-left">
+    <h2>Get In Touch</h2>
+
+    <h3>Shop Address</h3>
+    <p><i class="fa-solid fa-location-dot"></i> 34/8, East Hukupara<br>
+    Gifirtok, Sadan<br>
+    Country Name</p>
+
+    <h3>Shop Hours</h3>
+    <p><i class="fa-solid fa-clock"></i> MON - FRIDAY: 8 to 9 PM<br>
+    SAT - SUN: 10 to 8 PM</p>
+
+    <h3>Contact</h3>
+    <p><i class="fa-solid fa-phone"></i> +00 111 222 3333</p>
+    <p><i class="fa-solid fa-envelope"></i> support@fruitkha.com</p>
+  </div>
+
+  <!-- RIGHT FORM BOX -->
+  <div class="contact-right">
+    <h2>Send Message</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <input type="text" placeholder="Subject">
+    <textarea placeholder="Message"></textarea>
+    <button>Send Message</button>
+  </div>
+
+</div>
+
+</div>
+
+
+<section class="location-section">
+    <h2>Find Our Location</h2>
+
+
+    <div class="map-container">
+        <!-- Google Maps Embed -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609864034!2d72.74109850315397!3d19.08219783933621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63f7cbdeb17%3A0xdea83b9a5e6e9d24!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1708239837735" 
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+
+<!-- box20 -->
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-box">
+      <h3>About Us</h3>
+      <p>
+        Ut enim ad minima veniam perspiciatis unde omnis iste natus error sit
+        voluptatem accusantium doloremque laudantium totam rem aperiam.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Get in Touch</h3>
+      <p>3481, East Hukupara, Gifrtok, USA</p>
+      <p>Email: support@ruktha.com</p>
+      <p>Phone: +00 111 222 3333</p>
+    </div>
+
+    <!-- Pages Column -->
+    <div class="footer-box">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe (RIGHT of Pages) -->
+    <div class="footer-box">
+      <h3>Subscribe</h3>
+      <p>Subscribe to our mailing list to get the latest updates.</p>
+      <form>
+        <input type="email" placeholder="Email">
+        <button>➤</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+   Copyrights © 2019 - Imran Hossain, All Rights Reserved.
+     
+   <p>Distributed By - Themewagon</p>
+   <div class="box22">
+ 
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+</div>
+
+  </div>
+   
+
+  
+
+</footer>
+
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".nav-center");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+  </script>
+
+</body>
+</html>
